@@ -1,192 +1,302 @@
-// var number1 = 25;
-// var number2 = 25;
+// 1. Ways to print in JavaScript
+// console.log("Hello World");
+// alert("me");
+// document.write("this is document write")
+
+// 2. Javascript console API
+// console.log("Hello World", 4 + 6, "Another log");
+// console.warn("this is warning");
+// console.error("This is an error");
+
+// 3. JavaScript Variables
+// What are Variables? - Containers to store data values
+
+/*
+multi 
+line 
+commment
+*/
+
+var number1 = 34;
+var number2 = 56;
 // console.log(number1 + number2);
 
-// data types in Javascript
+// 4. Data types in JavaScript
+// Numbers
+var num1 = 455;
+var num2 = 56.76;
 
-// strings
-// var str1 = "this is a string";
-// var str2 = "this is also a string";
-// numbers
-// var num1 = 455;
-// var num2 = 56.25;
-// objects
-// var marks = {
-//   ravi: 34,
-//   shubham: 78,
-//   pro: 99.999,
-// };
+// String
+var str1 = "This is a string";
+var str2 = 'This is also a string';
 
-// // Booleans
-// var a = true;
-// var b = false;
+// Objects
+var marks = {
+    ravi: 34,
+    shubham: 78,
+    harry: 99.977
+}
+// console.log(marks);
 
-// undefined
-// var und;
-// var unf = undefined;
+// Booleans
+var a = true;
+var b = false;
+// console.log(a, b);
 
-// Null
-// var nun = null;
+// var und = undefined;
+var und;
+// console.log(und);
 
-// Datatypes
-// 1.Primitive(undefined, null, number, string, boolean, symbol)
-// 2. Reference (Arrays and Objects)
+var n = null;
+// console.log(n);
+/*
+At a very high level, there are two types of data types in JavaScript
+1. Primitive data types: undefined, null, number, string, boolean, symbol
+2. Reference data types: Arrays and Objects
+*/
 
-// arrays(Collections Of elements)
-// var arr = [25, 25, 50, 51, 14546];
+var arr = [1, 2, "bablu", 4, 5]
+// console.log(arr)
 
-// functions
-// function avg(a, b) {
-//   c = a + b;
-//   return c;
+// Operators in JavaScript
+// Arithmetic Operators
+var a = 100;
+var b = 10;
+// console.log("The value of a + b is ", a+b);
+// console.log("The value of a - b is ", a-b);
+// console.log("The value of a * b is ", a*b);
+// console.log("The value of a / b is ", a/b);
+
+// Assignment Operators
+var c = b;
+// c += 2;
+// c -= 2; // c = c - 2;
+// c *= 2;
+// c /= 2;
+// console.log(c);
+
+// Comparison Operators
+var x = 34;
+var y = 56;
+// console.log(x == y);
+// console.log(x >= y);
+// console.log(x <= y);
+// console.log(x > y);
+// console.log(x < y);
+
+// Logical Operators
+
+// Logical and
+// console.log(true && true)
+// console.log(true && false)
+// console.log(false && true)
+// console.log(false && false)
+
+// Logical or
+// console.log(true || true)
+// console.log(true || false)
+// console.log(false || true)
+// console.log(false || false)
+
+// Logical not
+// console.log(!false);
+// console.log(!true);
+
+// Function in JavaScript
+function avg(a, b) {
+    c = (a + b) / 2;
+    return c;
+}
+// DRY = Do not repeat yourself
+c1 = avg(4, 6);
+c2 = avg(14, 16);
+// console.log(c1, c2);
+
+// Conditionals in JavaScript
+/*
+var age = 41;
+// Single if statement
+if(age > 18){
+    console.log('You can drink rasna water');
+}
+// if - else statement
+// if(age > 18){
+//     console.log('You can drink rasna water');
+// }
+// else{
+//     console.log('You cannot drink rasna water');
 // }
 
-// c1 = avg(4, 6);
-// console.log(c1);
-
-// Condotion in Javascript
-/* var age = 34;
-if (age > 18){
-    console.log("you are not a kid");
+age = 25;
+// if-else Ladder
+if(age > 32){
+    console.log("You are not a kid");
 }
-else if (age > 2){
-    console.log("padai pe dhyan de string pe nhi");
+else if(age >26){
+    console.log("Bachhe nahi rahe");
+}
+else if(age >22){
+    console.log("Yes Bachhe nahi rahe");
+}
+else if(age >18){
+    console.log("18 Bachhe nahi rahe");
 }
 else{
-    console.log("you are a kid");
-} */
+    console.log("Bachhe rahe");
+}
+console.log("End of ladder");
+*/
 
-// Loops in Javascript
-// var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-// For Loop
-// for (var i = 0; i < arr.length; i++){
-//   console.log(arr);
+var arr = [1, 2, 3, 4, 5, 6, 7];
+// console.log(arr);
+// for(var i=0;i<arr.length;i++){
+//     if(i==2){
+//         // break;
+//         continue;
+//     }
+//     console.log(arr[i])
 // }
 
-// ForEach Loop
 // arr.forEach(function(element){
 //     console.log(element);
 // })
-
-// Var Let Constant
-// var t=0;
-// let j = 0;
 // const ac = 0;
-
-// while loop
+// ac++;
+// ac = ac +1;
+// let j = 0;
 // while(j<arr.length){
 //     console.log(arr[j]);
-//     j++;
+//     j ++;
 // }
 
-// do while loop with Break And Continue
 // do{
-//     j++;
-//     // Continue
-//     if(j==3){
-//         continue;
-//     }
 //     console.log(arr[j]);
-//     // Break
-//     if(j==8){
-//         break;
-//     }
-// }while(j<arr[j]);
+//     j++;
+// } while (j < arr.length);
 
+let myArr = ["Fan", "Camera", 34, null, true];
 // Array Methods
-// let myarr=["tan", "fan", "can", 34 , null, true, undefined];
-// console.log(myarr);
-// myarr.pop();//used to or hide the last element
-// myarr.push("Hero");//Push a element in the last of the array
-// myarr.shift();//delete a elemnet at first place
-// myarr.unshift("heroatfirstplace");//add a element at first place
-// const newline = myarr.unshift("heroatfirstplace");//it used to show the legth of the array after placing this, if we use direct to console.log it works as same
-// There are to many other array methodssuch as "tostring" to convert all in string and "sort" to sort in alphabatically
-// console.log(myarr);
+// console.log(myArr.length);
+// myArr.pop();
+// myArr.push("harry")
+// myArr.shift()
+// const newLen = myArr.unshift("Harry")
+// console.log(newLen);
+// console.log(myArr);
 
-// string methods in Javascript
-// let stringm = "hello i am rohit deshmukh rohit"
-// console.group(stringm);
-// console.log(stringm.length);//it shows the total length of the string with spaces
-// console.log(stringm.indexOf("rohit"));//It shows the where from the first or this is started
-// console.log(stringm.lastIndexOf("rohit"));//this is started from councting from the last
-// console.log(stringm.slice(1,5));//It shows the selected words from the string with last one of n-1
-// d = stringm.replace("rohit", "tusar");//it replaces the first value that comes first with the given value
-// console.log(d);
+// String Methods in JavaScript
+let myLovelyString = "Harry is a good boy good good Harry";
+// console.log(myLovelyString.length)
+// console.log(myLovelyString.indexOf("good"))
+// console.log(myLovelyString.lastIndexOf("good"))
 
+// console.log(myLovelyString.slice(1,4))
+d = myLovelyString.replace("Harry", "Rohan");
+// d = d.replace("good", "bad");
+// console.log(d, myLovelyString)
 
-// Dates in Javasccript
-// let mydate = new Date();
-// console.log(mydate);//there are to many or that gives us the specified info about the date and time
+let myDate = new Date();
+// console.log(myDate.getTime());
+// console.log(myDate.getFullYear());
+// console.log(myDate.getDay());
+// console.log(myDate.getMinutes());
+// console.log(myDate.getHours());
+ 
+// DOM Manipulation
+let elem = document.getElementById('click');
+// console.log(elem);
 
-// DOM Manuplation
-// document.getElementById("buttons").style.background = "yellow";  //calling the HTML Element by There ID And Give Them a Fuction
-// document.getElementsByClassName("buttons");  //calling the HTML Element by There classname And Give Them a Fuction
-// document.getElementsByTagName("button");  //calling the HTML Element by there Tags name
-// document.getElementById("para").classList.add("testingdom");  //adds the class name in the html website
-// document.getElementById("para").classList.remove("testingdom");  //Removes the class name in the html website
-// document.getElementById("para").innerText  //shows th einner text only text that we writes there
-// document.getElementById("para").innerHTML  //shows th inner HTML of the class ir id
-// createdele = document.createElement('p');
-// createdele.innerText = "HEllo world this is created by the javascript createelement";
-// document.getElementById('para').appendChild(createdele);
-// createdele2 = document.createElement('b');
-// createdele2.innerText = "HEllo world this is Replaced by the javascript createelement22222";
-// document.getElementById('para').replaceChild(createdele2, createdele);
-// removechild is used to remove it
+let elemClass = document.getElementsByClassName("container")
+// console.log(elemClass);
+// elemClass[0].style.background = "yellow";
+elemClass[0].classList.add("bg-primary")
+elemClass[0].classList.add("text-success")
+// console.log(elem.innerHTML);
+// console.log(elem.innerText); 
 
+// console.log(elemClass[0].innerHTML);
+// console.log(elemClass[0].innerText); 
+tn = document.getElementsByTagName('div')
+// console.log(tn)
+createdElement = document.createElement('p');
+createdElement.innerText = "This is a created para";
+tn[0].appendChild(createdElement);
+createdElement2 = document.createElement('b');
+createdElement2.innerText = "This is a created bold";
+tn[0].replaceChild(createdElement2, createdElement);
+// removeChild(element); ---> removes an element
+ 
+// Selecting using Query
+// sel = document.querySelector('.container')
+// console.log(sel)
+// sel = document.querySelectorAll('.container')
+// console.log(sel)
 
-// Selecting Using query
-// console.log(document.querySelector(".container"));//Gives the query of the selected Item of only one of them comes first
-// console.log(document.querySelectorAll(".container")); //Gives the query of the all items that have the ids or class
-
-// Events in Javascript
 // function clicked(){
-//     console.log("Button Was CLicked");
+//     console.log('The button was clicked')
 // }
-
-// It is used to run a fuction after the window is loaded
 // window.onload = function(){
-//     console.log("hellor the document is loaded");
+//     console.log('The document was loaded')
+
 // }
-
-//  Adding a event listener to any object
-// let prevHTML = document.querySelector('#para').innerHTML;
-// document.getElementById('para').addEventListener('mousedown', function(){
-//     document.querySelector('#para').innerHTML = "<br> Hello World To KEse Chal raha hai ajj kal"
-// })
-// document.getElementById('para').addEventListener('mouseup', function(){
-//     document.querySelector('#para').innerHTML = prevHTML;
+// Events in JavaScript
+// firstContainer.addEventListener('click', function(){
+//     document.querySelectorAll('.container')[1].innerHTML = "<b> We have clicked</b>"
+//     console.log("Clicked on Container")
 // })
 
-// arrow Function !!Also Used to define Function  with arrows uese in between code
-summ = (a,b)=> {
-    let c = a+b;
-    return c;
+// firstContainer.addEventListener('mouseover', function(){
+//     console.log("Mouse on Container")
+// })
+
+// firstContainer.addEventListener('mouseout', function(){
+//     console.log("Mouse out of Container");
+// })
+
+// let prevHTML = document.querySelectorAll('.container')[1].innerHTML;
+// firstContainer.addEventListener('mouseup', function(){
+//     document.querySelectorAll('.container')[1].innerHTML = prevHTML;
+//     console.log("Mouse up when clicked on Container");
+// })
+
+// firstContainer.addEventListener('mousedown', function(){
+//     document.querySelectorAll('.container')[1].innerHTML = "<b> We have clicked</b>"
+//     console.log("Mouse down when clicked on Container");
+// })
+
+
+// Arrow Functions
+// function summ(a, b){
+//     return a+b;
+// }
+summ = (a,b)=>{
+    return a+b;
 }
 
-// Set Time Out Set Interval
-// let tarif = 0;
-// function timer(){
-//     // for(ter = 0,ter=10,ter++){
-//         // console.log(ter);
-//         document.querySelector('#para').innerHTML = "This iS A TImer That Restarts After "+tarif;
-//         tarif++;
-//     // }
-// }
-// bamses = setInterval(timer, 1000);
+logKaro = ()=>{
+    document.querySelectorAll('.container')[1].innerHTML = "<b> Set interval fired</b>"
+    console.log("I am your log")
+}
+// SetTimeout and setinterval
+// clr = setTimeout(logKaro, 5000);
+// clr = setInterval(logKaro, 2000);
+// use clearInterval(clr)/clearTimeout(clr) to cancel setInterval/setTimeout
 
+// JavaScript localStorage
+// localStorage.setItem('name', 'harry') 
+// localStorage 
+// localStorage.getItem('name')
+// localStorage.removeItem('name')
+// localStorage.clear();
 
-// Javascript Local Storage !!use to store small or notsensitve data
-// localStorage.setItem('name', 'Tusar');
-// localStorage.getitem('name'); //used to get item from the localstorage
-// localStorage.clear(); //used to clear the local storage
-// localStorage.removeItem(): //used to remove a specific item
+// Json 
+// obj = {name: "harry", length: 1, a: {this: 'tha"t'}}
+// jso = JSON.stringify(obj);
+// console.log(typeof jso)
+// console.log(jso)
+// parsed = JSON.parse(`{"name":"harry","length":1,"a":{"this":"that"}}`)
+// console.log(parsed);
 
-// Json //Use to Exchange Data !!it is used to excahnge data in changing thise in string to excahnge easily
-exobj = {name: 'hello',lenght: 1};
-exjs = JSON.stringify(exobj); //stringfy is used to convert anything into string to transport or sxchange it
-exparse = JSON.parse(exjs); //parse is used to convert the JSON stringfy into Javascript Code
-
-// Typeof //used to show the toye of whatever
-
+// Template literals - Backticks
+a = 34;
+console.log(`this is my ${a}`)
